@@ -25,18 +25,20 @@ SECRET_KEY = 'si+@$k4ilx8$o#d&)0@&zdw9p94h+(aj6%@z^8@oq^)dozq=7l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'rorounifix.pythonanywhere.com']
+ALLOWED_HOSTS = [u'rorounifix.pythonanywhere.com','localhost']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'listorder',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mathfilters',
 ]
 
 MIDDLEWARE = [
@@ -78,13 +80,6 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     },
-    'production': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'rorounifix$pizzaapp',
-        'USER': 'rorounifix',
-        'PASSWORD': 'A9zHdM4UHYh@5AY',
-        'HOST': 'rorounifix.mysql.pythonanywhere-services.com',
-    }
 }
 
 
